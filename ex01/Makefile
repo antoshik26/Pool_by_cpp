@@ -3,7 +3,8 @@ CC = clang++
 FLAGS = -Wall -Wextra -Werror
 INCLUDE = -I include
 HEADER = ./include/death_note.hpp
-SRCS = death_note.cpp
+SRCS =	./include/death_note.cpp \
+		death_note.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 
