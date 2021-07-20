@@ -13,7 +13,7 @@ int main(void)
 		std::cin >> reading;
 		if (reading == "ADD")
 		{
-			persen[i].add_persen_in_death_note();
+			add_persen_in_death_note();
 		}
 		else if (reading == "SEARCH")
 		{
