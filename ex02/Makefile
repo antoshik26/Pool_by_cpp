@@ -1,7 +1,8 @@
 NAME = megaphone
 CC = clang++
 FLAGS = -Wall -Wextra -Werror
-SRCS = megaphone.cpp
+SRCS =	Account.cpp \
+		test.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 
