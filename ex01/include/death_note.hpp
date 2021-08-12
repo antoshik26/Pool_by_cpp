@@ -16,7 +16,7 @@ class persen_in_death_note
 	public:
 		persen_in_death_note(void);
 		~persen_in_death_note(void);
-		void print_death_note(int index);
-		void add_persen(int index);
+		void print_death_note_persen(int index);
+		void add_persen();
 };
 #endif

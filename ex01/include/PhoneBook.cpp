@@ -12,19 +12,19 @@ Phonebook::~Phonebook(void)
 
 void Phonebook::print_basement()
 {
-	std::cout << "|-------------------------------------------|" << std::endl;
+	std::cout << "|---------------------------------------------------|" << std::endl;
 }
 
 void Phonebook::print_head()
 {
-	std::cout << "|-------------------------------------------|" << std::endl;
-	std::cout << "|     Index|First Name| Last Name|  Nickname|" << std::endl;
-	std::cout << "|-------------------------------------------|" << std::endl;
+	std::cout << "|---------------------------------------------------|" << std::endl;
+	std::cout << "|   Index    | First Name |  Last Name |  Nickname  |" << std::endl;
+	std::cout << "|---------------------------------------------------|" << std::endl;
 }
 
 void Phonebook::print_death_note()
 {
-	this->persen[this->index].print_death_note(this->index);
+	persen[index].print_death_note_persen(index);
 }
 
 void Phonebook::print_death_note_all()
@@ -34,17 +34,17 @@ void Phonebook::print_death_note_all()
 
 	i = 0;
 	j = 0;
-	this->print_head();
+	print_head();
 	while(i < 8)
 	{
-		this->persen[i].print_death_note(i);
+		persen[i].print_death_note_persen(i + 1);
 		i++;
 	}
-	this->print_basement();
+	print_basement();
 }
 
 void Phonebook::add_persen_in_death_note()
 {
-	this->persen[this->index].add_persen(this->index);
-	this->index++;
+	persen[index].add_persen();
+	index++;
 }

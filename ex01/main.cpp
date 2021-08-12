@@ -23,7 +23,7 @@ int main(void)
 		{
 			phonebook.print_death_note_all();
 		}
-		else if (reading == "END")
+		else if (reading == "EXIT")
 		{
 			return (0);
 		}
