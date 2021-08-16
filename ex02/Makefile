@@ -1,18 +1,20 @@
-NAME = megaphone
+NAME = Account
 CC = clang++
 FLAGS = -Wall -Wextra -Werror
+INCLUDE = -I.
+HEADER = Account.hpp
 SRCS =	Account.cpp \
-		test.cpp
+		tests.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 
 %.o: %.cpp
-	${CC} -o ${FLAGS} -c $< -o ${<:.cpp=.o}
+	${CC} -o -I. -c $< -o ${<:.cpp=.o}
 
 all:	${NAME}
 
 ${NAME}:	${OBJS}
-			${CC} -o ${NAME} ${OBJS}
+			${CC}  -I. -o ${NAME} ${OBJS}
 
 clean:
 		rm -rf ${OBJS}

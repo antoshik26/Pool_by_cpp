@@ -11,7 +11,7 @@ OBJS = ${SRCS:.cpp=.o}
 all:	${NAME}
 
 ${NAME}:	${OBJS}
-			${CC} -o ${NAME} ${OBJS}
+			${CC} ${FLAGS} -o ${NAME} ${OBJS}
 
 clean:
 		rm -rf ${OBJS}
