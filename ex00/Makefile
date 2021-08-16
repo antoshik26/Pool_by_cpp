@@ -1,17 +1,21 @@
-NAME = megaphone
+NAME = BraiiiiiiinnnzzzZ
 CC = clang++
 FLAGS = -Wall -Wextra -Werror
-SRCS = megaphone.cpp
+INCLUDE = -I.
+SRCS =	Zombie.cpp \
+		newZombie.cpp \
+		randomChump.cpp \
+		main.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 
 %.o: %.cpp
-	${CC} -o ${FLAGS} -c $< -o ${<:.cpp=.o}
+	${CC} ${FLAGS} -o ${INCLUDE} -c $< -o ${<:.cpp=.o}
 
 all:	${NAME}
 
 ${NAME}:	${OBJS}
-			${CC} ${FLAGS} -o ${NAME} ${OBJS}
+			${CC} ${FLAGS} ${INCLUDE} -o ${NAME} ${OBJS}
 
 clean:
 		rm -rf ${OBJS}
