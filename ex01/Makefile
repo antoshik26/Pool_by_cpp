@@ -1,21 +1,20 @@
 NAME = death_note
 CC = clang++
 FLAGS = -Wall -Wextra -Werror
-INCLUDE = -I include
-HEADER = ./include/death_note.hpp ./includede/PhoneBook.hpp
-SRCS =	./include/death_note.cpp \
-		./include/PhoneBook.cpp \
+INCLUDE = -I.
+SRCS =	death_note.cpp \
+		PhoneBook.cpp \
 		main.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 
 %.o: %.cpp
-	${CC} -o ${INCLUDE} -c $< -o ${<:.cpp=.o}
+	${CC} ${FLAGS} -o ${INCLUDE} -c $< -o ${<:.cpp=.o}
 
 all:	${NAME}
 
 ${NAME}:	${OBJS}
-			${CC} ${INCLUDE} -o ${NAME} ${OBJS}
+			${CC} ${FLAGS} ${INCLUDE} -o ${NAME} ${OBJS}
 
 clean:
 		rm -rf ${OBJS}

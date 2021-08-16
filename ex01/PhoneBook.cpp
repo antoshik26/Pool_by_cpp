@@ -46,6 +46,6 @@ void Phonebook::print_death_note_all()
 void Phonebook::add_persen_in_death_note()
 {
 	persen[index].add_persen();
-	if (index != 8)
+	if (index != 7)
 		index++;
 }

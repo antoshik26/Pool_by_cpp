@@ -29,18 +29,18 @@ void print_death_note_persen_features(std::string features)
 {
 	if (features.length() > 10)
 	{
-		for (int i = 0; i < 10; i++)
+		for (unsigned int i = 0; i < 10; i++)
 		{
 			std::cout << features[i];
 		}
 	}
 	if (features.length() < 10)
 	{
-		for (int i = 0; i < 10 - features.length(); i++)
+		for (unsigned int i = 0; i < 10 - features.length(); i++)
 		{
 			std::cout << " ";
 		}
-		for (int i = 0; i < features.length(); i++)
+		for (unsigned int i = 0; i < features.length(); i++)
 		{
 			std::cout << features[i];
 		}
