@@ -1,10 +1,8 @@
-NAME = Account
+NAME = HI_THIS_IS_BRAIN
 CC = clang++
 FLAGS = -Wall -Wextra -Werror
 INCLUDE = -I.
-HEADER = Account.hpp
-SRCS =	Account.cpp \
-		tests.cpp
+SRCS =	main.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 

@@ -1,10 +1,12 @@
 #include "Zombie.hpp"
 
-void Zombie::randomChump( std::string name )
+void randomChump( std::string name )
 {
-	Zombie *Zombie;
+	Zombie *newZombie;
 
-	Zombie = newZombie(name);
-	Zombie->announce();
-	delete(Zombie);
+	newZombie = new Zombie();
+	newZombie->setname(name);
+	//newZombie = newZombie(name);
+	newZombie->announce();
+	delete(newZombie);
 }

@@ -3,10 +3,10 @@
 int main(void)
 {
 	Zombie *zombie;
+	std::string name;
 
-	zombie = newZombie("Gomez");
-	zombie->announce();
+	name = "GOMEZ";
+	zombie = zombieHorde(10, "GOMEZ");
 	delete(zombie);
-	randomChump("GOMEZ");
 	return (0);
 }
