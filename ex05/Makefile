@@ -1,10 +1,10 @@
-NAME = Account
+NAME = Karen
 CC = clang++
 FLAGS = -Wall -Wextra -Werror
 INCLUDE = -I.
-HEADER = Account.hpp
-SRCS =	Account.cpp \
-		tests.cpp
+HEADER = Karen.hpp
+SRCS =	Karen.cpp \
+		main.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 
