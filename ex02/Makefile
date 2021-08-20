@@ -1,8 +1,10 @@
-NAME = HI_THIS_IS_BRAIN
+NAME = karenFilter
 CC = clang++
 FLAGS = -Wall -Wextra -Werror
 INCLUDE = -I.
-SRCS =	main.cpp
+HEADER = Karen.hpp
+SRCS =	Karen.cpp \
+		main.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 
