@@ -1,9 +1,9 @@
-NAME = karenFilter
+NAME = Fixed2
 CC = clang++
 FLAGS = -Wall -Wextra -Werror
 INCLUDE = -I.
-HEADER = Karen.hpp
-SRCS =	Karen.cpp \
+HEADER = Fixed.hpp
+SRCS =	Fixed.cpp \
 		main.cpp
 
 OBJS = ${SRCS:.cpp=.o}
