@@ -1,9 +1,10 @@
-NAME = Fixed3
+NAME = ScavTrap
 CC = clang++
 FLAGS = -Wall -Wextra -Werror
 INCLUDE = -I.
-HEADER = Fixed.hpp
-SRCS =	Fixed.cpp \
+HEADER = ClapTrap.hpp FragTrap.hpp
+SRCS =	ClapTrap.cpp \
+		FragTrap.cpp \
 		main.cpp
 
 OBJS = ${SRCS:.cpp=.o}

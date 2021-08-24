@@ -6,7 +6,7 @@ ClapTrap::ClapTrap(std::string name_trap)
 	Hitpoints = 10;
 	Energy_points = 10;
 	Attack_damage = 0;
-	std::cout << "Constructor called" << std::endl;
+	std::cout << "Constructor ClapTrap called" << std::endl;
 }
 
 int ClapTrap::getHitpoints()
@@ -51,7 +51,7 @@ void ClapTrap::setAttack_deamge(int new_Attack_deamge)
 
 ClapTrap::~ClapTrap()
 {
-	std::cout << "Destructor called" << std::endl;
+	std::cout << "Destructor ClapTrap called" << std::endl;
 }
 
 void ClapTrap::attack(std::string const &target)
