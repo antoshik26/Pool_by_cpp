@@ -1,4 +1,4 @@
-NAME = Fixed2
+NAME = Fixed3
 CC = clang++
 FLAGS = -Wall -Wextra -Werror
 INCLUDE = -I.

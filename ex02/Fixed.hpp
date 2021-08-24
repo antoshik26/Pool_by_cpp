@@ -1,6 +1,7 @@
 #ifndef FIXED_HPP
 #define FIXED_HPP
 #include <iostream>
+#define epsilon .00390625f
 
 class Fixed
 {
@@ -18,16 +19,20 @@ class Fixed
 		Fixed operator-(Fixed const &obj) const;
 		Fixed operator*(Fixed const &obj) const;
 		Fixed operator/(Fixed const &obj) const;
-		bool operator<(Fixed const &obj, Fixed const &obj_2) const;
-		bool operator>(Fixed const &obj, Fixed const &obj_2) const;
-		bool operator>=(Fixed const &obj, Fixed const &obj_2) const;
-		bool operator<=(Fixed const &obj, Fixed const &obj_2) const;
-		bool operator==(Fixed const &obj, Fixed const &obj_2) const;
-		bool operator!=(Fixed const &obj, Fixed const &obj_2) const;
-		bool max(Fixed const &obj, Fixed const &obj_2) const;
-		bool min(Fixed const &obj, Fixed const &obj_2) const;
+		bool operator<(Fixed const &obj) const;
+		bool operator>(Fixed const &obj) const;
+		bool operator>=(Fixed const &obj) const;
+		bool operator<=(Fixed const &obj) const;
+		bool operator==(Fixed const &obj) const;
+		bool operator!=(Fixed const &obj) const;
+		Fixed &operator++();
+		Fixed operator++(int);
+		Fixed &operator--();
+		Fixed operator--(int);
+		static Fixed &max(Fixed const &obj, Fixed const &obj_2);
+		static Fixed &min(Fixed const &obj, Fixed const &obj_2);
 		int toInt(void) const;
-		int toFloat(void) const;
+		float toFloat(void) const;
 		int getRawBits( void ) const;
 		void setRawBits( int const raw );
 };
