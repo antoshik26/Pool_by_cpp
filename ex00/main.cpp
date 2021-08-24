@@ -1,14 +1,11 @@
-#include <iostream>
-#include "Fixed.hpp"
+#include "ClapTrap.hpp"
 
-int main( void ) 
+int main()
 {
-	Fixed a;
-	Fixed b( a );
-	Fixed c;
-	c = b;
-	std::cout << a.getRawBits() << std::endl;
-	std::cout << b.getRawBits() << std::endl;
-	std::cout << c.getRawBits() << std::endl;
-	return 0;
+	Trap Evel_trap("Evel_trap");
+	
+	Evel_trap.attack("Gomez");
+	Evel_trap.takeDamege(2);
+	Evel_trap.beRepaired(7);
+	return (0);
 }
