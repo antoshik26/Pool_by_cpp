@@ -9,6 +9,23 @@ ClapTrap::ClapTrap(std::string name_trap)
 	std::cout << "Constructor ClapTrap called" << std::endl;
 }
 
+ClapTrap::ClapTrap(const ClapTrap &trap)
+{
+	this->name = trap.name;
+	this->Hitpoints = trap.Hitpoints;
+	this->Energy_points = trap.Energy_points;
+	this->Attack_damage = trap.Attack_damage;
+}
+
+ClapTrap& ClapTrap::operator=(const ClapTrap &trap)
+{
+	this->name = trap.name;
+	this->Hitpoints = trap.Hitpoints;
+	this->Energy_points = trap.Energy_points;
+	this->Attack_damage = trap.Attack_damage;
+	return (*this);
+}
+
 int ClapTrap::getHitpoints()
 {
 	return (Hitpoints);

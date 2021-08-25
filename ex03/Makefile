@@ -1,20 +1,23 @@
-NAME = Fixed3
+NAME = Ensemble_traps
 CC = clang++
-FLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror -Wshadow -Wno-shadow
 INCLUDE = -I.
-HEADER = Fixed.hpp
-SRCS =	Fixed.cpp \
+HEADER = ClapTrap.hpp FragTrap.hpp ScavTrap.hpp DiamondTrap.hpp
+SRCS =	ClapTrap.cpp \
+		FragTrap.cpp \
+		ScavTrap.cpp \
+		DiamondTrap.cpp \
 		main.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 
 %.o: %.cpp
-	${CC} -o -I. -c $< -o ${<:.cpp=.o}
+	${CC} ${FLAGS} -o -I. -c $< -o ${<:.cpp=.o}
 
 all:	${NAME}
 
 ${NAME}:	${OBJS}
-			${CC}  -I. -o ${NAME} ${OBJS}
+			${CC} ${FLAGS} -I. -o ${NAME} ${OBJS}
 
 clean:
 		rm -rf ${OBJS}

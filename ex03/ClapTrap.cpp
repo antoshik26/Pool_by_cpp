@@ -73,17 +73,17 @@ ClapTrap::~ClapTrap()
 
 void ClapTrap::attack(std::string const &target)
 {
-	std::cout << "ClapTrap " << this->getName() << " attack " << target << ", causing " << this->getAttack_deamge() << " points of damage!" << std::endl;
+	std::cout << this->getName() << " attack " << target << ", causing " << this->getAttack_deamge() << " points of damage!" << std::endl;
 }
 
 void ClapTrap::takeDamege(unsigned int amount)
 {
 	Energy_points -= amount;
-	std::cout << "ClapTrap " << this->getName() << " got a damege of " << amount << " points." << std::endl;
+	std::cout << this->getName() << " got a damege of " << amount << " points." << std::endl;
 }
 
 void ClapTrap::beRepaired(unsigned int amount)
 {
 	Energy_points += amount;
-	std::cout << "ClapTrap " << this->getName() << " replenished the energy on " << amount << " points." << std::endl;
+	std::cout << this->getName() << " replenished the energy on " << amount << " points." << std::endl;
 }

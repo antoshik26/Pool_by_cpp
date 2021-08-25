@@ -1,4 +1,4 @@
-NAME = ScavTrap
+NAME = FragTrap
 CC = clang++
 FLAGS = -Wall -Wextra -Werror
 INCLUDE = -I.
@@ -10,12 +10,12 @@ SRCS =	ClapTrap.cpp \
 OBJS = ${SRCS:.cpp=.o}
 
 %.o: %.cpp
-	${CC} -o -I. -c $< -o ${<:.cpp=.o}
+	${CC} ${FLAGS} -o -I. -c $< -o ${<:.cpp=.o}
 
 all:	${NAME}
 
 ${NAME}:	${OBJS}
-			${CC}  -I. -o ${NAME} ${OBJS}
+			${CC} ${FLAGS} -I. -o ${NAME} ${OBJS}
 
 clean:
 		rm -rf ${OBJS}
