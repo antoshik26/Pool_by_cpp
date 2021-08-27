@@ -5,9 +5,13 @@
 class Ice : public AMateria
 {
 	public:
+		Ice();
+		~Ice();
+		Ice(Ice const &ice);
+		Ice &operator=(Ice cosnt &ice);
 
-	private:
-
+		virtual AMateria* clone();
+		virtual void Use(ICharacter &ice);
 };
 
 #endif
