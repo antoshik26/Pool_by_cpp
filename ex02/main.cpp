@@ -1,17 +1,15 @@
-#include "ClapTrap.hpp"
-#include "FragTrap.hpp"
+#include "Animal.hpp"
+#include "Cat.hpp"
+#include "Dog.hpp"
+#include "Brain.hpp"
+#include <iostream>
 
 int main()
 {
-	ClapTrap Evel_trap("Evel_trap");
-	FragTrap Trapa("Good_trap");
-	
-	Evel_trap.attack("Gomez");
-	Trapa.attack("Li");
-	Evel_trap.takeDamege(2);
-	Trapa.takeDamege(100);
-	Evel_trap.beRepaired(7);
-	Trapa.beRepaired(100);
-	Trapa.highFivesGuys();
+	const Animal* j = new Dog();
+	const Animal* i = new Cat();
+
+	delete j;//should not create a leak
+	delete i;
 	return (0);
 }

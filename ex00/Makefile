@@ -1,9 +1,11 @@
-NAME = Trap
+NAME = Zoo
 CC = clang++
 FLAGS = -Wall -Wextra -Werror
 INCLUDE = -I.
-HEADER = ClapTrap.hpp
-SRCS =	ClapTrap.cpp \
+HEADER = Animal.hpp Cat.hpp Dog.hpp
+SRCS =	Animal.cpp \
+		Cat.cpp \
+		Dog.cpp \
 		main.cpp
 
 OBJS = ${SRCS:.cpp=.o}

@@ -1,17 +1,15 @@
-#include "ClapTrap.hpp"
-#include "ScavTrap.hpp"
+#include "Animal.hpp"
+#include "Cat.hpp"
+#include "Dog.hpp"
+#include "Brain.hpp"
+#include <iostream>
 
 int main()
 {
-	ClapTrap Evel_trap("Evel_trap");
-	ScavTrap Gard_trap("Gard_trap");
-	
-	Evel_trap.attack("Gomez");
-	Gard_trap.attack("Diego");
-	Evel_trap.takeDamege(2);
-	Gard_trap.takeDamege(7);
-	Evel_trap.beRepaired(7);
-	Gard_trap.beRepaired(10);
-	Gard_trap.guardGate();
+	const Animal* j = new Dog();
+	const Animal* i = new Cat();
+
+	delete j;//should not create a leak
+	delete i;
 	return (0);
 }

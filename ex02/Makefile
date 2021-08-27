@@ -1,10 +1,12 @@
-NAME = FragTrap
+NAME = Zoo_3_animal_with_brain_without_animal
 CC = clang++
 FLAGS = -Wall -Wextra -Werror
 INCLUDE = -I.
-HEADER = ClapTrap.hpp FragTrap.hpp
-SRCS =	ClapTrap.cpp \
-		FragTrap.cpp \
+HEADER = Brain.hpp Animal.hpp Cat.hpp Dog.hpp
+SRCS =	Animal.cpp \
+		Brain.cpp \
+		Cat.cpp \
+		Dog.cpp \
 		main.cpp
 
 OBJS = ${SRCS:.cpp=.o}

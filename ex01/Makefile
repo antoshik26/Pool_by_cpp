@@ -1,10 +1,12 @@
-NAME = ScavTrap
+NAME = Zoo_2_animal_with_brain
 CC = clang++
 FLAGS = -Wall -Wextra -Werror
 INCLUDE = -I.
-HEADER = ClapTrap.hpp ScavTrap.hpp
-SRCS =	ClapTrap.cpp \
-		ScavTrap.cpp \
+HEADER = Brain.hpp Animal.hpp Cat.hpp Dog.hpp
+SRCS =	Animal.cpp \
+		Brain.cpp \
+		Cat.cpp \
+		Dog.cpp \
 		main.cpp
 
 OBJS = ${SRCS:.cpp=.o}
