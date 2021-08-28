@@ -41,6 +41,7 @@ void Character::equip(AMateria* m)
 		if (materia[i] == NULL)
 		{
 			materia[i] = m;
+			break;
 		}
 	}
 }
