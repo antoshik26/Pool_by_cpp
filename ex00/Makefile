@@ -1,11 +1,9 @@
-NAME = Zoo
+NAME = Bureaucrat
 CC = clang++
 FLAGS = -Wall -Wextra -Werror
 INCLUDE = -I.
-HEADER = Animal.hpp Cat.hpp Dog.hpp
-SRCS =	Animal.cpp \
-		Cat.cpp \
-		Dog.cpp \
+HEADER = Bureaucrat.hpp
+SRCS =	Bureaucrat.cpp \
 		main.cpp
 
 OBJS = ${SRCS:.cpp=.o}

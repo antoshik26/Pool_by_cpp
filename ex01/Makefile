@@ -1,4 +1,4 @@
-NAME = Zoo_2_animal_with_brain
+NAME = Bureaucrat
 CC = clang++
 FLAGS = -Wall -Wextra -Werror
 INCLUDE = -I.
