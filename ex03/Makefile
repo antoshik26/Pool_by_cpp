@@ -1,12 +1,13 @@
-NAME = Ensemble_traps
+NAME = Bag_in_RPG
 CC = clang++
-FLAGS = -Wall -Wextra -Werror -Wshadow -Wno-shadow
+FLAGS = -Wall -Wextra -Werror
 INCLUDE = -I.
-HEADER = ClapTrap.hpp FragTrap.hpp ScavTrap.hpp DiamondTrap.hpp
-SRCS =	ClapTrap.cpp \
-		FragTrap.cpp \
-		ScavTrap.cpp \
-		DiamondTrap.cpp \
+HEADER = AMateria.hpp Caracter.hpp Cure.hpp ICaracter.hpp Ice.hpp IMateriaSource.hpp MateriaSource.hpp
+SRCS =	AMateria.cpp \
+		Caracter.cpp \
+		Cure.cpp \
+		Ice.cpp \
+		MateriaSource.cpp \
 		main.cpp
 
 OBJS = ${SRCS:.cpp=.o}
