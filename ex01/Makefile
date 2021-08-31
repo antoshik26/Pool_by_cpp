@@ -1,12 +1,10 @@
-NAME = Bureaucrat
+NAME = Bureaucrat_and_paper
 CC = clang++
 FLAGS = -Wall -Wextra -Werror
 INCLUDE = -I.
-HEADER = Brain.hpp Animal.hpp Cat.hpp Dog.hpp
-SRCS =	Animal.cpp \
-		Brain.cpp \
-		Cat.cpp \
-		Dog.cpp \
+HEADER = Bureaucrat.hpp Form.hpp
+SRCS =	Bureaucrat.cpp \
+		Form.cpp \
 		main.cpp
 
 OBJS = ${SRCS:.cpp=.o}

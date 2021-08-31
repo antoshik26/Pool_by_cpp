@@ -1,12 +1,13 @@
-NAME = Zoo_3_animal_with_brain_without_animal
+NAME = Bureaucrat_and_various_documents
 CC = clang++
 FLAGS = -Wall -Wextra -Werror
 INCLUDE = -I.
-HEADER = Brain.hpp Animal.hpp Cat.hpp Dog.hpp
-SRCS =	Animal.cpp \
-		Brain.cpp \
-		Cat.cpp \
-		Dog.cpp \
+HEADER = Bureaucrat.hpp Form.hpp PresidentialPardonForm.hpp RobotomyRequestForm.hpp ShrubberyCreationForm.hpp
+SRCS =	Bureaucrat.cpp \
+		Form.cpp \
+		PresidentialPardonForm.cpp \
+		RobotomyRequestForm.cpp \
+		ShrubberyCreationForm.cpp \
 		main.cpp
 
 OBJS = ${SRCS:.cpp=.o}

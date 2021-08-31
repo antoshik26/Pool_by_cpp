@@ -1,6 +1,8 @@
 #ifndef BUREAUCRAT_HPP
 #define BUREAUCRAT_HPP
 #include <iostream>
+class Form;
+#include "Form.hpp"
 
 class Bureaucrat
 {
@@ -28,6 +30,8 @@ class Bureaucrat
 		void setgrade(int grade);
 		void upgradeBureaucrat();
 		void lowgradeBureaucrat();
+		void signForm(Form const &form) const;
+		void executeForm(Form const & form);
 };
 
 std::ostream &operator<<(std::ostream &os, const Bureaucrat &bureaucrat);

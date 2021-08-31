@@ -134,3 +134,15 @@ const char* Bureaucrat::GradeTooHighException::what() const throw()
 {
 	return ("Grade bureauctat too hide.");
 }
+
+void Bureaucrat::signForm(Form const &form) const
+{
+	if (form.getsigned_form() == true)
+	{
+		std::cout << "Buracrat " << getname() << " signed " << form.getname() << "." << std::endl;
+	}
+	else
+	{	
+		std::cout << "Buracrat " << getname() << " cannot sign " << form.getname() << " because grade buractat is too low." << std::endl;
+	}
+}
