@@ -9,10 +9,11 @@ class ShrubberyCreationForm : public Form
 	public:
 		ShrubberyCreationForm(std::string target);
 		~ShrubberyCreationForm();
-		ShrubberyCreationForm(ShrubberyCreationFormconst &obj);
-		ShrubberyCreationForm &operator=(ShrubberyCreationForm &obj);
-		std::string getTarget();
-		virtual void execute(Bureaucrat const &bureaucrat);
+		ShrubberyCreationForm(ShrubberyCreationForm const &obj);
+		ShrubberyCreationForm &operator=(ShrubberyCreationForm const &obj);
+		std::string getTarget() const;
+		virtual void execute(Bureaucrat const &bureaucrat) const;
 };
 
+std::ostream &operator<<(std::ostream &os, const ShrubberyCreationForm &obj);
 #endif

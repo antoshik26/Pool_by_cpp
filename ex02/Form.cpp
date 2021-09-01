@@ -108,3 +108,13 @@ const char* Form::GradeTooHighException::what() const throw()
 {
 	return ("Grade of is too high");
 }
+
+const char* Form::AccomplishmentException::what() const throw()
+{
+	return ("Bureaucrat can`t accomplishment form, because accoplishment level buractat is too low.");
+}
+
+const char* Form::SignedForm::what() const throw()
+{
+	return ("Bureaucrat tries to execute an unsigned program.");
+}

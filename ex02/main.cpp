@@ -1,23 +1,22 @@
 #include "Bureaucrat.hpp"
 #include "Form.hpp"
+#include "PresidentialPardonForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "ShrubberyCreationForm.hpp"
 
 int main()
 {
 	Bureaucrat* bureaucrat = new Bureaucrat("evel", 1);
 	Bureaucrat* bureaucrat2 = new Bureaucrat("evel2", 150);
-	Form* form = new Form("1", 1, 1);
-	Form* form2 = new Form("2", 140, 150);
-	Form* form3 = new Form("3", 151, 151);
-	Form* form4 = new Form("4", 0, 0);
+	ShrubberyCreationForm* form1 = new ShrubberyCreationForm("sdfhdfg");
 
-	form->beSigned(*bureaucrat);
-	form2->beSigned(*bureaucrat2);
+	bureaucrat->executeForm(*form1);
+	
+	form1->beSigned(*bureaucrat);
+	bureaucrat2->executeForm(*form1);
 
 	delete(bureaucrat);
 	delete(bureaucrat2);
-	delete(form);
-	delete(form2);
-	delete(form3);
-	delete(form4);
+	delete(form1);
 	return (0);
 }

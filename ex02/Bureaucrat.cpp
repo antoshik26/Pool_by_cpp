@@ -147,7 +147,28 @@ void Bureaucrat::signForm(Form const &form) const
 	}
 }
 
-// void Bureaucrat::executeForm(Form const &form)
-// {
-
-// }
+void Bureaucrat::executeForm(Form const &form)
+{
+	try
+	{
+		if (form.getsigned_form() == true)
+		{
+			if (form.getgrade_accomplishment() > this->getgrade())
+			{
+				form.execute(*this);
+			}
+			else
+			{
+				throw Form::AccomplishmentException();
+			}
+		}
+		else
+		{
+			throw Form::SignedForm();
+		}
+	}
+	catch (std::exception &e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+}

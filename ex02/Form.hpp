@@ -21,7 +21,7 @@ class Form
 		};
 	public:
 		Form(std::string name, int grade_signed, int grade_accomplishment);
-		~Form();
+		virtual ~Form();
 		Form(Form const &form);
 		Form &operator=(Form const &form);
 		std::string getname() const;
@@ -30,6 +30,14 @@ class Form
 		int getgrade_accomplishment() const;
 		void beSigned(Bureaucrat const &bureaucrat);
 		virtual void execute(Bureaucrat const & executor) const = 0;
+		class AccomplishmentException : public std::exception
+		{
+			virtual const char* what() const throw();
+		};
+		class SignedForm : public std::exception
+		{
+			virtual const char* what() const throw();
+		};
 };
 
 std::ostream &operator<<(std::ostream &os, Form const &form);
