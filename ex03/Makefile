@@ -1,13 +1,14 @@
-NAME = Bag_in_RPG
+NAME = Bureaucrat_and_bondman_from_the_university
 CC = clang++
 FLAGS = -Wall -Wextra -Werror
 INCLUDE = -I.
-HEADER = AMateria.hpp Caracter.hpp Cure.hpp ICaracter.hpp Ice.hpp IMateriaSource.hpp MateriaSource.hpp
-SRCS =	AMateria.cpp \
-		Caracter.cpp \
-		Cure.cpp \
-		Ice.cpp \
-		MateriaSource.cpp \
+HEADER = Bureaucrat.hpp Form.hpp PresidentialPardonForm.hpp RobotomyRequestForm.hpp ShrubberyCreationForm.hpp Intern.hpp
+SRCS =	Bureaucrat.cpp \
+		Form.cpp \
+		PresidentialPardonForm.cpp \
+		RobotomyRequestForm.cpp \
+		ShrubberyCreationForm.cpp \
+		Intern.cpp \
 		main.cpp
 
 OBJS = ${SRCS:.cpp=.o}
