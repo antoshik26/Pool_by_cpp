@@ -1,13 +1,9 @@
-NAME = Bureaucrat_and_various_documents
+NAME = Identify_real_type
 CC = clang++
 FLAGS = -Wall -Wextra -Werror
 INCLUDE = -I.
-HEADER = Bureaucrat.hpp Form.hpp PresidentialPardonForm.hpp RobotomyRequestForm.hpp ShrubberyCreationForm.hpp
-SRCS =	Bureaucrat.cpp \
-		Form.cpp \
-		PresidentialPardonForm.cpp \
-		RobotomyRequestForm.cpp \
-		ShrubberyCreationForm.cpp \
+HEADER = Base.hpp Entry_class.hpp
+SRCS =	Base.cpp \
 		main.cpp
 
 OBJS = ${SRCS:.cpp=.o}
