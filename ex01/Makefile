@@ -1,11 +1,8 @@
-NAME = Bureaucrat_and_paper
+NAME = Serialize_and_deserialize
 CC = clang++
 FLAGS = -Wall -Wextra -Werror
 INCLUDE = -I.
-HEADER = Bureaucrat.hpp Form.hpp
-SRCS =	Bureaucrat.cpp \
-		Form.cpp \
-		main.cpp
+SRCS = main.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 
