@@ -1,9 +1,9 @@
-NAME = Bureaucrat
+NAME = convert
 CC = clang++
 FLAGS = -Wall -Wextra -Werror
 INCLUDE = -I.
-HEADER = Bureaucrat.hpp
-SRCS =	Bureaucrat.cpp \
+HEADER = Type_conversion.hpp
+SRCS =	Type_conversion.cpp \
 		main.cpp
 
 OBJS = ${SRCS:.cpp=.o}
