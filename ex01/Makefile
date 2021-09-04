@@ -1,7 +1,8 @@
-NAME = Serialize_and_deserialize
+NAME = iter
 CC = clang++
 FLAGS = -Wall -Wextra -Werror
 INCLUDE = -I.
+HEADER = iter.hpp
 SRCS = main.cpp
 
 OBJS = ${SRCS:.cpp=.o}

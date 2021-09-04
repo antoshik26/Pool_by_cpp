@@ -1,10 +1,9 @@
-NAME = Identify_real_type
+NAME = Array
 CC = clang++
 FLAGS = -Wall -Wextra -Werror
 INCLUDE = -I.
-HEADER = Base.hpp Entry_class.hpp
-SRCS =	Base.cpp \
-		main.cpp
+HEADER = Array.hpp
+SRCS = main.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 

@@ -1,9 +1,9 @@
-NAME = convert
+NAME = functions
 CC = clang++
 FLAGS = -Wall -Wextra -Werror
 INCLUDE = -I.
-HEADER = Type_conversion.hpp
-SRCS =	Type_conversion.cpp \
+HEADER = whatever.hpp
+SRCS =	whatever.cpp \
 		main.cpp
 
 OBJS = ${SRCS:.cpp=.o}
