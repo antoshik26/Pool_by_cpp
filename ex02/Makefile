@@ -1,9 +1,10 @@
-NAME = Array
+NAME = mystack
 CC = clang++
 FLAGS = -Wall -Wextra -Werror
 INCLUDE = -I.
-HEADER = Array.hpp
-SRCS = main.cpp
+HEADER = mutantstack.hpp
+SRCS = 	mutantstack.cpp \
+		main.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 

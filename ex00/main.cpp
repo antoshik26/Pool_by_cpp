@@ -1,35 +1,39 @@
-#include "whatever.hpp"
-#include <iostream>
+#include "easyfind.hpp"
 
-int main(void)
-{
-	int a = 2;
-	int b = 3;
-	::swap( a, b );
-	std::cout << "a = " << a << ", b = " << b << std::endl;
-	std::cout << "min( a, b ) = " << ::min( a, b ) << std::endl;
-	std::cout << "max( a, b ) = " << ::max( a, b ) << std::endl;
-	std::string c = "chaine1";
-	std::string d = "chaine2";
-	::swap(c, d);
-	std::cout << "c = " << c << ", d = " << d << std::endl;
-	std::cout << "min( c, d ) = " << ::min( c, d ) << std::endl;
-	std::cout << "max( c, d ) = " << ::max( c, d ) << std::endl;
-	return 0;
+int main( void ) {
+	std::list<int> list;
+
+	list.push_back(0);
+	list.push_back(1);
+	list.push_back(1);
+	list.push_back(2);
+	list.push_back(3);
+	list.push_back(5);
+	list.push_back(8);
+
+	std::cout << "Searched value \'1\' in list: " << ::easyfind(list, 1) << std::endl;
+	std::cout << "Searched value \'8\' in list: " << ::easyfind(list, 8) << std::endl;
+	try{
+		std::cout << "Searched value \'13\' in list: " << ::easyfind(list, 13) << std::endl;}
+	catch( std::exception &e ){
+		std::cerr << e.what() << std::endl;}
+
+	std::vector<int> vector;
+
+	vector.push_back(0);
+	vector.push_back(1);
+	vector.push_back(1);
+	vector.push_back(2);
+	vector.push_back(3);
+	vector.push_back(5);
+	vector.push_back(8);
+
+	std::cout << "Searched value \'1\' in VECTOR: " << ::easyfind(list, 1) << std::endl;
+	std::cout << "Searched value \'8\' in VECTOR: " << ::easyfind(list, 8) << std::endl;
+	try{
+		std::cout << "Searched value \'13\' in VECTOR: " << ::easyfind(list, 13) << std::endl;}
+	catch( std::exception &e ){
+		std::cerr << e.what() << std::endl;}
+
+	return (0);
 }
-
-// #include <iostream>
-// template<class Type>
-// Type _min(Type a, Type b) {
-//     if (a < b) {
-//         return a;
-//     }
-//     return b;
-// }
-
-// int main(int argc, char** argv) {
-//     std::cout << _min(1, 2) << std::endl;
-//     std::cout << _min<double>(3.1, 1.2) << std::endl;
-//     std::cout << _min<double>(5, 2.1) << std::endl; // oops!
-//     return 0;
-// }

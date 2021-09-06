@@ -1,10 +1,9 @@
-NAME = functions
+NAME = Easyfind
 CC = clang++
 FLAGS = -Wall -Wextra -Werror
 INCLUDE = -I.
-HEADER = whatever.hpp
-SRCS =	whatever.cpp \
-		main.cpp
+HEADER = easyfind.hpp
+SRCS =	main.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 

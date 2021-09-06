@@ -1,22 +1,17 @@
-#include "iter.hpp"
 #include <iostream>
-
-void print_array(std::string const &str)
-{
-	std::cout << str << std::endl;
-}
-
-void print_array2(int const &num)
-{
-	std::cout << num << std::endl;
-}
+#include "span.hpp"
 
 int main()
 {
-	std::string str[5] = {"afsdghg", "asdf", "aesdfg", "asd", "asdfg"};
-	int i[10] = {1, 10, 2, 20, 3, 30, 4, 40, 5, 50};
+	Span sp = Span(5);
 
-	iter(str, 5, print_array);
-	iter(i, 10, print_array2);
+	sp.addNumber(5);
+	sp.addNumber(3);
+	sp.addNumber(17);
+	sp.addNumber(9);
+	sp.addNumber(11);
+
+	std::cout << sp.shortestSpan() << std::endl;
+	std::cout << sp.longestSpan() << std::endl;
 	return (0);
 }

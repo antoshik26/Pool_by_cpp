@@ -1,9 +1,10 @@
-NAME = iter
+NAME = Span
 CC = clang++
 FLAGS = -Wall -Wextra -Werror
 INCLUDE = -I.
-HEADER = iter.hpp
-SRCS = main.cpp
+HEADER = span.hpp
+SRCS =	span.cpp \
+		main.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 
