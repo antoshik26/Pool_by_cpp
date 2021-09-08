@@ -8,7 +8,7 @@ int main()
 	ClapTrap Evel_trap("Evel_trap");
 	FragTrap Trapa("Good_trap");
 	ScavTrap Gard_trap("Gard_trap");
-	DiamondTrap Monster("Monster", "Evel_trap");
+	DiamondTrap Monster("Monster");
 	
 	std::cout << std::endl;
 	Evel_trap.attack("Gomez");
