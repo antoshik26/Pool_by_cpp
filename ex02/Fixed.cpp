@@ -3,35 +3,30 @@
 Fixed::Fixed()
 {
 	fixed = 0;
-	std::cout << "Default constructor called" << std::endl;
 }
 
 Fixed::Fixed(int fixed)
 {
-	this->fixed = fixed;
-	std::cout << "Int constructor called" << std::endl;
+	this->fixed = fixed * (1 << fraction);
 }
 
 Fixed::Fixed(float fixed)
 {
-	std::cout << "Float constructor called" << std::endl;
-	this->fixed = fixed * (1 << fraction);
+	this->fixed = std::roundf(fixed * (1 << fraction));
 }
+
 
 Fixed::~Fixed()
 {
-	std::cout << "Destructor called" << std::endl;
 }
 
 Fixed::Fixed(const Fixed &rhs)
 {
-	std::cout << "Copy constructor called" << std::endl;
 	this->fixed = rhs.getRawBits();
 }
 
 int Fixed::getRawBits( void ) const
 {
-	std::cout << "getRawBits member function called" << std::endl;
 	return (fixed);
 }
 
@@ -42,7 +37,6 @@ void Fixed::setRawBits( int const raw )
 
 Fixed &Fixed::operator=(const Fixed &obj)
 {
-	std::cout << "Assignation operator called" << std::endl;
 	this->fixed = obj.getRawBits();
 	return *this;
 }
@@ -55,17 +49,18 @@ std::ostream &operator<<(std::ostream &os, Fixed const &fixed)
 
 int Fixed::toInt() const
 {
-	return(this->fixed);
+	return (roundf((float)this->fixed / (float)(1 << fraction)));
 }
 
-float Fixed::toFloat(void) const
+float	Fixed::toFloat(void) const
 {
-    return  (float)fixed / (1 << fraction);
+	return ((float)this->fixed / (float)(1 << fraction));
 }
 
-Fixed Fixed::operator+(Fixed const &obj) const
-{
-	return Fixed(fixed + obj.fixed);
+Fixed Fixed::operator+ (const Fixed & one) const {
+	Fixed r;
+	r.setRawBits(this->fixed + one.getRawBits());
+	return r;
 }
 
 Fixed Fixed::operator-(Fixed const &obj) const
@@ -73,9 +68,10 @@ Fixed Fixed::operator-(Fixed const &obj) const
 	return Fixed(fixed - obj.fixed);
 }
 
-Fixed Fixed::operator*(Fixed const &obj) const
-{
-	return Fixed(fixed * obj.fixed);
+Fixed Fixed::operator* (const Fixed &one) const {
+	Fixed r;
+	r.fixed = this->fixed * one.getRawBits() >> 8;
+	return r;
 }
 
 Fixed Fixed::operator/(Fixed const &obj) const

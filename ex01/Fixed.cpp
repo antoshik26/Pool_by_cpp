@@ -8,13 +8,13 @@ Fixed::Fixed()
 
 Fixed::Fixed(int fixed)
 {
-	this->fixed = fixed;
+	this->fixed = fixed * (1 << fraction);
 	std::cout << "Int constructor called" << std::endl;
 }
 
 Fixed::Fixed(float fixed)
 {
-	fixed = std::roundf(n * (1 << fraction));
+	this->fixed = std::roundf(fixed * (1 << fraction));
 	std::cout << "Float constructor called" << std::endl;
 }
 
@@ -55,10 +55,10 @@ std::ostream &operator<<(std::ostream &os, Fixed const &fixed)
 
 int Fixed::toInt() const
 {
-	return(this->fixed);
+	return (roundf((float)this->fixed / (float)(1 << fraction)));
 }
 
 float	Fixed::toFloat(void) const
 {
-    return  (float)fixed / (1 << fraction);
+	return ((float)this->fixed / (float)(1 << fraction));
 }
