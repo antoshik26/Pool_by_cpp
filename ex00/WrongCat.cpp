@@ -19,7 +19,7 @@ WrongCat::WrongCat(WrongCat const &animal)
 WrongCat &WrongCat::operator=(WrongCat const &animal)
 {
 	type = animal.type;
-	(*this);
+	return (*this);
 }
 
 std::string WrongCat::getType() const

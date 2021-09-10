@@ -31,3 +31,23 @@ std::string Cat::getType() const
 {
 	return (type);
 }
+
+std::string Cat::getidea(int i) const
+{
+	return (brain_cat->getidea(i));
+}
+
+// virtual std::string getarrayideas()
+// {
+
+// }
+
+void Cat::setidea(std::string idea, int i) const
+{
+	brain_cat->setidea(idea, i);
+}
+
+// virtual void setideas()
+// {
+	
+// }

@@ -16,6 +16,10 @@ class Cat : public Animal
 		virtual std::string getType() const;
 		//virtual void setType(std::string new_type);
 		virtual void makeSound() const;
+		virtual std::string getidea(int i) const; 
+		// virtual std::string getarrayideas();
+		virtual void setidea(std::string idea, int i) const;
+		// virtual void setideas();
 };
 
 #endif
