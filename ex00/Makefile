@@ -2,8 +2,10 @@ NAME = Zoo
 CC = clang++
 FLAGS = -Wall -Wextra -Werror
 INCLUDE = -I.
-HEADER = Animal.hpp Cat.hpp Dog.hpp
-SRCS =	Animal.cpp \
+HEADER = Animal.hpp Cat.hpp Dog.hpp WrongAnimal.hpp WrongCat.hpp
+SRCS =	WrongAnimal.cpp \
+		WrongCat.cpp \
+		Animal.cpp \
 		Cat.cpp \
 		Dog.cpp \
 		main.cpp
