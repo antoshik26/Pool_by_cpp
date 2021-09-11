@@ -10,5 +10,6 @@ int main()
 	Intern someRandomIntern;
 	Form* rrf;
 	rrf = someRandomIntern.makeForm("PresidentialPardonForm", "Bender");
+	delete (rrf);
 	return (0);
 }
