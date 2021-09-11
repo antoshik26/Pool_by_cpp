@@ -27,6 +27,7 @@ int main()
 	std::cout << "Serialize    : " << serialized << std::endl;
 	std::cout << "Deserialize  : " << deserialize(serialized) << std::endl;
 	std::cout << "Deserialize  : " << deserialize(serialized)->data1 << std::endl;
-	std::cout << "Deserialize  : " << deserialize(serialized)->data1 << std::endl;
+	std::cout << "Deserialize  : " << deserialize(serialized)->data2 << std::endl;
+	delete(data);
 	return (0);
 }

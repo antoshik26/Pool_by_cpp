@@ -9,7 +9,7 @@ Type_conversion::Type_conversion(std::string str)
 		void (Type_conversion::*memberFunction[7])(void) = {&Type_conversion::Nan, &Type_conversion::Nanf, &Type_conversion::Minus_inf, &Type_conversion::Plus_inf, &Type_conversion::Zero, &Type_conversion::Minus_inff, &Type_conversion::Plus_inff}; 
 		
 		flag = 0;
-		for (int i = 0; i < 5; i++)
+		for (int i = 0; i < 7; i++)
 		{
 			if (str == literal[i])
 			{
