@@ -3,8 +3,7 @@ CC = clang++
 FLAGS = -Wall -Wextra -Werror
 INCLUDE = -I.
 HEADER = whatever.hpp
-SRCS =	whatever.cpp \
-		main.cpp
+SRCS =	main.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 
