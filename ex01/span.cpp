@@ -30,7 +30,7 @@ Span &Span::operator=(const Span &span)
 
 void Span::addNumber(int c)
 {
-	if (i == t.size())
+	if (i == count)
 		throw Span::NoSpaseSpan();
 	else
 	{
