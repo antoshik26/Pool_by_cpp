@@ -1,69 +1,31 @@
 #ifndef MUTANTSTACK_HPP
 #define MUTANTSTACK_HPP
 # include <iostream>
+# include <map>
 # include <stack>
+# include <vector>
 # include <algorithm>
 
 template<typename T>
 class MutantStack : public std::stack<T>
 {
-	private:
-		std::vector<int> t;
 	public:
-		class iterator
+		MutantStack() : std::stack<T>() {}
+		MutantStack(const MutantStack<T>& src) { *this = src; }
+		virtual ~MutantStack() {}
+
+		MutantStack<T>& operator=(const MutantStack<T>& rhs) 
 		{
-			public:
-				// iterator(int):current(curr);
-				iterator &operator=(const iterator &other);
-				iterator &operator++();
-				iterator &operator--();
-				int operator*();
-				int* operator->();
-				bool operator==(const iterator &other);
-				bool operator!=(const iterator &other);
+			this->c = rhs.c;
+			return *this;
 		}
-		MutantStack();
-		~MutantStack();
-		MutantStack(const MutantStack &stack);
-		MutantStack &operator=(const MutantStack &stack);
-		void push(int c);
-		int pop();
-		int top();
-		int size();
-		iterator begin();
-		iterator end();
+		typedef typename std::stack<T>::container_type::iterator iterator;
+
+		iterator begin() { return this->c.begin(); }
+		iterator end() { return this->c.end(); }
+    	iterator begin() const { return this->c.begin; }
+    	iterator end() const { return this->c.end; }
+
 };
 
 #endif
-// #pragma once
-// #ifndef __MutantStack__HPP__
-// # define __MutantStack__HPP__
-// # include <iostream>
-// # include <list>
-// # include <vector>
-// # include <deque>
-// # include <stack>
-// # include <exception>
-// # include <algorithm>
-
-// template <typename T>
-// class MutantStack : public std::stack<T> {
-// 	public:
-// 		MutantStack() : std::stack<T>() {}
-// 		virtual ~MutantStack() {}
-
-// 		MutantStack(const MutantStack & copy) {
-// 			*this = copy;
-// 		}
-// 		MutantStack & operator=(const MutantStack & copy) {
-// 			std::stack<T>::operator=(copy);
-// 			return (*this);
-// 		}
-
-// 		typedef typename std::deque<T>::iterator iterator;
-
-// 		iterator	begin() { return (this->c.begin()); }
-// 		iterator	end() { return (this->c.end()); }
-// };
-
-// #endif
